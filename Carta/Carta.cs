@@ -56,7 +56,7 @@ public class Carta : MonoBehaviour {
             cartaSelecionada = null;
         }
     }
-
+    // teste
     IEnumerator GiraCarta()
     {
         yield return StartCoroutine(transform.RotateObject(90, 0.5f));
