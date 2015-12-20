@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: d280ed2ab5f76884dba98d1a755fef6f
+timeCreated: 1450554723
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Full Deck Playing Cards2_0
+    21300002: Full Deck Playing Cards2_1
+    21300004: Full Deck Playing Cards2_2
+    21300006: Full Deck Playing Cards2_3
+    21300008: Full Deck Playing Cards2_4
+    21300010: Full Deck Playing Cards2_5
+    21300012: Full Deck Playing Cards2_6
+    21300014: Full Deck Playing Cards2_7
+    21300016: Full Deck Playing Cards2_8
+    21300018: Full Deck Playing Cards2_9
+    21300020: Full Deck Playing Cards2_10
+    21300022: Full Deck Playing Cards2_11
+    21300024: Full Deck Playing Cards2_12
+    21300026: Full Deck Playing Cards2_13
+    21300028: Full Deck Playing Cards2_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Full Deck Playing Cards2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 842.666626
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 842.666626
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 842.666626
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 842.666626
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 842.666626
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421.666656
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 421.666656
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 421.666656
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 421.666656
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 421.666656
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: .666656494
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: .666656494
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: .666656494
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: .666656494
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Full Deck Playing Cards2_14
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: .666656494
+        width: 320
+        height: 421.333344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
