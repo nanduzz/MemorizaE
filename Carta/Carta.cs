@@ -46,15 +46,22 @@ public class Carta : MonoBehaviour {
             if (cartaSelecionada.idImagem == this.idImagem)
             {
                 Debug.Log("Certo Mizeravi");
+                cartaSelecionada = null;
             }
             else
             {
-                Debug.Log("Erro Mardito");
+                StartCoroutine(VoltaCartas(2f));
             }
-            StartCoroutine(cartaSelecionada.GiraCarta());
-            StartCoroutine(this.GiraCarta());
-            cartaSelecionada = null;
+           
         }
+    }
+
+    IEnumerator VoltaCartas(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        StartCoroutine(cartaSelecionada.GiraCarta());
+        StartCoroutine(this.GiraCarta());
+        cartaSelecionada = null;
     }
 
     IEnumerator GiraCarta()
