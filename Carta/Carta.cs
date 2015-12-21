@@ -13,6 +13,7 @@ public class Carta : MonoBehaviour {
     //[SerializeField]
     public static Sprite[] imagens;
     private int idImagem;
+    private static bool podeJogar;
 
     [SerializeField]
     private Sprite costasCarta;
@@ -23,6 +24,7 @@ public class Carta : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
+        podeJogar = true;
         isCartaAtiva = false;
         imagens = Resources.LoadAll<Sprite>("Imagens");
     }
@@ -35,24 +37,30 @@ public class Carta : MonoBehaviour {
 
     void OnMouseDown()
     {
-        StartCoroutine(GiraCarta());
-        if (cartaSelecionada == null)
+        if (podeJogar)
         {
-            cartaSelecionada = this;
-            return;
-        }
-        if (cartaSelecionada != null && cartaSelecionada != this)
-        {
-            if (cartaSelecionada.idImagem == this.idImagem)
+            podeJogar = false;
+            StartCoroutine(GiraCarta());
+            if (cartaSelecionada == null)
             {
-                Debug.Log("Certo Mizeravi");
-                cartaSelecionada = null;
+                cartaSelecionada = this;
+                podeJogar = true;
+                return;
             }
-            else
+            if (cartaSelecionada != null && cartaSelecionada != this)
             {
-                StartCoroutine(VoltaCartas(2f));
+                if (cartaSelecionada.idImagem == this.idImagem)
+                {
+                    Debug.Log("Certo Mizeravi");
+                    podeJogar = true;
+                    cartaSelecionada = null;
+                }
+                else
+                {
+                    StartCoroutine(VoltaCartas(2f));
+                }
+
             }
-           
         }
     }
 
@@ -62,6 +70,7 @@ public class Carta : MonoBehaviour {
         StartCoroutine(cartaSelecionada.GiraCarta());
         StartCoroutine(this.GiraCarta());
         cartaSelecionada = null;
+        podeJogar = true;
     }
 
     IEnumerator GiraCarta()
