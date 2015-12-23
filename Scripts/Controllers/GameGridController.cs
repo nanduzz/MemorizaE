@@ -17,7 +17,6 @@ public class GameGridController : MonoBehaviour {
 
     void Awake()
     {
-        
         CriaGrid(spriteRenderer.bounds.size[0], spriteRenderer.bounds.size[1]);
     }
 
