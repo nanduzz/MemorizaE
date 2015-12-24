@@ -12,6 +12,7 @@ public class Carta : MonoBehaviour {
 
     //[SerializeField]
     public static Sprite[] imagens;
+    [SerializeField]
     private int idImagem;
     private static bool podeJogar;
 
@@ -21,6 +22,19 @@ public class Carta : MonoBehaviour {
     [SerializeField]
     private Animator anim;
 
+    public int IdImagem
+    {
+        get
+        {
+            return idImagem;
+        }
+
+        set
+        {
+            idImagem = value;
+        }
+    }
+
     // Use this for initialization
     void Awake()
     {
@@ -28,12 +42,6 @@ public class Carta : MonoBehaviour {
         isCartaAtiva = false;
         imagens = Resources.LoadAll<Sprite>("Imagens");
     }
-    
-	void Start () {
-        idImagem = Random.Range(0, imagens.Length - 1 );
-    }
-
-    // Update is called once per frame
 
     void OnMouseDown()
     {
@@ -49,14 +57,15 @@ public class Carta : MonoBehaviour {
             }
             if (cartaSelecionada != null && cartaSelecionada != this)
             {
-                if (cartaSelecionada.idImagem == this.idImagem)
+                if (cartaSelecionada.IdImagem == this.IdImagem)
                 {
-                    Debug.Log("Certo Mizeravi");
+                    PontuacaoController.MarcaAcerto();
                     podeJogar = true;
                     cartaSelecionada = null;
                 }
                 else
                 {
+                    PontuacaoController.MarcaErro();
                     StartCoroutine(VoltaCartas(2f));
                 }
 
@@ -78,7 +87,7 @@ public class Carta : MonoBehaviour {
         yield return StartCoroutine(transform.RotateObject(90, 0.5f));
         if (!isCartaAtiva)
         {
-            imagem.sprite = imagens[idImagem];
+            imagem.sprite = imagens[this.IdImagem];
             isCartaAtiva = true;
         }
         else {
