@@ -17,9 +17,12 @@ public class GameGridController : MonoBehaviour {
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
+    public static int numeroDePares;
+
     void Awake()
     {
         cartas = new GameObject[tamanhoHorizontal * tamanhoVertical];
+        numeroDePares = (tamanhoHorizontal * tamanhoVertical) / 2;
         CriaGrid(spriteRenderer.bounds.size[0], spriteRenderer.bounds.size[1]);
     }
 
@@ -30,20 +33,19 @@ public class GameGridController : MonoBehaviour {
             Debug.Log("tamanho do grid deve ser par");
         }
         int i = 0;
-        int metadeCartas = (tamanhoHorizontal * tamanhoVertical) / 2;
         for (int x = 0; x < tamanhoHorizontal; x++)
         {
             for (int y = 0; y < tamanhoVertical; y++)
             {
                 cartas[i] = (GameObject)Instantiate(cartaBase, new Vector3(x * cartaX, y * cartaY), Quaternion.identity);
                 cartas[i].name = x + " - " + y;
-                if ( i < metadeCartas)
+                if ( i < numeroDePares)
                 {
                     cartas[i].GetComponent<Carta>().IdImagem = Random.Range(0, 13);
                 }
                 else
                 {
-                    cartas[i].GetComponent<Carta>().IdImagem = cartas[i - metadeCartas].GetComponent<Carta>().IdImagem;
+                    cartas[i].GetComponent<Carta>().IdImagem = cartas[i - numeroDePares].GetComponent<Carta>().IdImagem;
                 }
                 i++;
             }

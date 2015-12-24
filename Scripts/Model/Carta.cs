@@ -45,7 +45,7 @@ public class Carta : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (podeJogar && this != cartaSelecionada)
+        if (podeJogar && this != cartaSelecionada && !isCartaAtiva) 
         {
             podeJogar = false;
             StartCoroutine(GiraCarta());

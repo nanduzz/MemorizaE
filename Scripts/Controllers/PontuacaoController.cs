@@ -10,6 +10,7 @@ public class PontuacaoController : MonoBehaviour {
     private static int pontuacaoBase;
 
     private static int pontuacaoTotal;
+    private static int numeroParesFeitos;
 
     [SerializeField]
     private Text textoPontuacao;
@@ -17,7 +18,7 @@ public class PontuacaoController : MonoBehaviour {
     void Awake()
     {
         MakeSingleton();
-        reiniciaMultiplicadorAcerto();
+        ReiniciaMultiplicadorAcerto();
         pontuacaoBase = 100;
         pontuacaoTotal = 0;
         alteraTextoPontuacao(pontuacaoTotal);
@@ -28,6 +29,10 @@ public class PontuacaoController : MonoBehaviour {
         pontuacaoTotal += pontuacaoBase * multiplicadorAcertos;
         instance.alteraTextoPontuacao(pontuacaoTotal);
         multiplicadorAcertos++;
+        numeroParesFeitos++;
+        if (Ganhou()){
+            Debug.Log("ganhou abertado");
+        }
     }
 
     public static void MarcaErro()
@@ -48,7 +53,7 @@ public class PontuacaoController : MonoBehaviour {
         }
     }
 
-    void reiniciaMultiplicadorAcerto()
+    void ReiniciaMultiplicadorAcerto()
     {
         multiplicadorAcertos = 1;
     }
@@ -56,6 +61,11 @@ public class PontuacaoController : MonoBehaviour {
     void alteraTextoPontuacao(int pontos)
     {
         textoPontuacao.text = "Pontos:" + pontos;
+    }
+
+    static bool Ganhou()
+    {
+        return numeroParesFeitos >= GameGridController.numeroDePares;
     }
     
 }
